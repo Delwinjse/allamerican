@@ -31,6 +31,26 @@ p
 	margin: 0 0 1.5em;
 	line-height: 1.5;
 }
+/* Custom Header */
+.custom-header {
+    background-color: #BCCFE5; /* Change to match your screenshot */
+    height: 80px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    height: 80px; /* Adjust size as needed */
+}
 
 blockquote
 {
