@@ -84,10 +84,10 @@ th, td
 	border-bottom: 1px solid #ddd;
 }
 
-a:link { color: royalblue; }
-a:visited { color: purple; }
+a:link { color: white; }
+a:visited { color: white; }
 a:focus { color: black; }
-a:hover { color: green; }
+a:hover { color: black; }
 a:active { color: red; }
 
 /* -----------------------
@@ -145,6 +145,46 @@ Layout styles
     border-radius: 0.25rem;
     margin-bottom: 1rem;
 }
+        
+        .cta {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 5px;
+        }
+        .cta:hover {
+            background-color: #218838;
+        }
+        .checklist {
+            text-align: left;
+            padding: 0 20px;
+        }
+        .checklist li {
+            list-style: none;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .checklist li::before {
+            content: "\2705";
+            margin-right: 8px;
+        }
+                .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
 
 /* -----------------------
 Nav
