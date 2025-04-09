@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  padding: 20px;
+  background-color: #D0D0D0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background-color: #4CAF50;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid #000;
+}
+
+.sort {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 40%;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+  text-align: right;
+}
+
+.info h3 {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.book-btn {
+  background-color: #4CAF50;
+  color: black;
+  font-weight: bold;
+  border: 2px solid #000;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-btn:hover {
+  background-color: #45a049;
+}
