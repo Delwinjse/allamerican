@@ -299,8 +299,12 @@ Single styles
 	width:70%;
 	margin-top:10px;
 }
-
-
+        .banner {
+            background-color: #ffcc00;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
 
 
 
