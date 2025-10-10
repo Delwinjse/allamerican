@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is your partner cheating?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .advertorial-label {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #3d4855;
+            border-bottom: none;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .cta-button {
+            background-color: #8bc34a;
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            background-color: #7cb342;
+        }
+        
+        .cta-button-large {
+            background-color: #8bc34a;
+            color: white;
+            padding: 18px 48px;
+            border: none;
+            font-size: 24px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 30px 0;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .cta-button-large:hover {
+            background-color: #7cb342;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            padding: 15px 40px;
+        }
+
+        .social-links a {
+            color: #999;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .author-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+        }
+
+        .author-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3d4855;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .update-date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        h1 {
+            color: #3d4855;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #3d4855;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 30px 0 15px 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-image {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+        }
+
+        .testimonial-box {
+            background-color: #f5f5f5;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #8bc34a;
+            font-style: italic;
+        }
+
+        .step-box {
+            background-color: #e8f5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #8bc34a;
+        }
+
+        .step-number {
+            color: #3d4855;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cta-center {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .bold-text {
+            font-weight: 700;
+            color: #000;
+        }
+
+        .disclaimer-section {
+            background-color: #f9f9f9;
+            border-top: 2px solid #e0e0e0;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .disclaimer-section .small {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .disclaimer-section a {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        .disclaimer-section a:hover {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .cta-button-large {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+    <script>
+        window.clickmagick_cmc = {
+            uid: '205495',
+            hid: '2544215302',
+            cmc_project: 'Phone Tracking Software',
+            cmc_ref: 'pre-sell',
+            vid_info: 'on',
+            log_engage: '#click',
+        }
+    </script>
+    <meta name="facebook-domain-verification" content="avxzznqnq1m1jvitz4jx06k90izrk6" />
+    <script src='//track.americancitizenoffers.com/38122746.js'></script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '4986740064559046');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4986740064559046&ev=PageView&noscript=1"
+    /></noscript>
+</head>
+<body>
+    <div class="advertorial-label">Is Your Partner Cheating?</div>
+    
+    <header>
+        <img src="assets/img/incognito-grey.png" alt="Company Logo" class="logo">
+    </header>
+
+    <div class="social-links">
+        <a href="#">f</a>
+        <a href="#">𝕏</a>
+        <a href="#">✉</a>
+    </div>
+
+    <div class="author-section">
+        <div class="author-logo"></div>
+        <div class="author-info">
+            <span class="author-name">Incognito</span>
+            <span class="update-date">Last updated: 23 September 2025</span>
+        </div>
+    </div>
+
+    <main>
+        <h1>What If Everything You Suspect Is True? How To Find Out If Your Partner Is Cheating With A Simple 3 Step Method.</h1>
+        
+        <img src="assets/img/reaction.png" alt="Relationship concerns" class="hero-image">
+        
+        <p class="intro-text"><b>The One Question That's Been Eating Away At You...</b></p>
+
+        <p><span class="bold-text">If you could know the truth—right now, without confrontation, without them flipping it back on you, without another sleepless night—would you finally do it?</span></p>
+
+        <p>Most people can tell if something when something is off in their relationship.</p>
+        
+        <p>Maybe you've caught your partner in a lie. Maybe they said something that doesn't add up. Or maybe they've just been acting different and you don't know why.</p>
+
+        <p>And if these suspicions are unresolved, it can cause serious issues. You don't know if you're right to trust them, or if you're being played like a fool.</p>
+
+        <p>That voice in your head something is wrong will continue to eat away at you unless you do something.</p>
+        
+        <img src="assets/img/sleep.jpg" alt="sleep" class="content-image">
+
+        <p>Unfortunately, it's almost impossible to find out for sure.</p>
+
+        <p>Most cheaters will protect their phone, hide their messages and even lie to you when asked.</p>
+
+        <p><span class="bold-text">So, what's the solution?</span></p>
+
+        <h2>What If You Could Know—Without Them Ever Finding Out?</h2>
+
+        <p>Here's what changed everything for thousands of people just like you:</p>
+
+        <p><span class="bold-text">A discreet app that gives you access to everything they've been hiding - and I mean everything.</span></p>
+
+        <p>This new app can track location (live and past), read texts, record phone calls, check social media (even apps like snapchat) and even reveal deleted conversations.</p>
+
+        <p>If you suspect your partner is cheating or lying to you, this app is almost guaranteed to find out the truth.</p>
+
+        <p>You can install it undetected too, so your partner will have no idea that they are being caught in a lie.</p>
+
+        <h2>"I Wish I'd Done This Sooner."</h2>
+
+        <p>We found thousands of positive reviews from real people who have found the truth about their relationships. Here are just a few.</p>
+
+        <div class="testimonial-box">
+            <p><b>Robert T.</b> "Used mSpy. I shouldn't have had to do this, but my husband was cheating, and he was gaslighting me! "Crazy," "imagining things" – I was losing my mind. Downloaded mSpy, but felt like a total creep. But then it took screenshots. Late-night chats, flirty as all heck. The truth, clear as day. MSpy didn't fix the marriage, but it fixed me. Proof I wasn't crazy."</p>
+        </div>
+                <div class="testimonial-box">
+            <p><b>Katherine E.</b> "He wasn't cheating. MSpy showed me that my husband wasn't texting his ex like I thought he was. She was trying to get back together with him, but he kept shutting her down. Feel a little silly for accusing him now, but at least it cleared the air."</p>
+        </div>
+
+        <div class="testimonial-box">
+            <p><b>Rebecca K.</b> "This app saved me from a bad marriage. I was able to uncover the truth about my then-fiance. Just before our wedding, I found out that he had been cheating on me and the only way I could do it was with mSpy."</p>
+        </div>
+        <h2>3 Step Method to Catch Any Cheater</h2>
+
+        <p>If you think your partner may be cheating, all you need to do to find out for sure is the following steps:</p>
+
+        <div class="step-box">
+            <div class="step-number">Step 1: Sign up to the app</div>
+            <p>Make sure to take advantage of their limited time discount</p>
+        </div>
+
+        <div class="step-box">
+            <div class="step-number">Step 2: Install Discreetly</div>
+            <p>Simply follow the easy instructions to install the app on their phone.</p>
+        </div>
+
+        <div class="step-box">
+            <div class="step-number">Step 3: Check your dashboard</div>
+            <p>Your dashboard contains all the information on your partners phones. Texts, calls and social media messages. You can even record new calls and watch live location here.</p>
+        </div>
+
+        <img src="assets/img/demo.png" alt="App interface" class="content-image">
+
+        <h2>"But Isn't This... Wrong?"</h2>
+
+        <p>Let me ask you something:</p>
+
+        <p><span class="bold-text">Is it wrong to protect yourself from being lied to? Is it wrong to want clarity instead of going insane with doubt? Is it wrong to verify the truth when someone has broken your trust?</span></p>
+
+        <p>You're not invading privacy. You're protecting your peace. You're reclaiming your dignity. You're refusing to be someone who ignored all the signs and stayed anyway.</p>
+
+        <p>You already know something's off. This just confirms it—or clears them.</p>
+
+        <p><span class="bold-text">Either way, you deserve to know.</span></p>
+
+        <h2>Right Now, There's a Limited-Time Offer</h2>
+
+        <p>The company behind this app—mSpy—is running a rare discount that could end at any time.</p>
+
+        <p>They don't advertise this publicly (for obvious reasons), but right now you can get access for a fraction of the normal price.</p>
+
+        <p>Thousands have already taken advantage of this offer. And every day you wait is another day you're living in uncertainty.</p>
+
+        <p>You can keep wondering. Keep losing sleep. Keep being told you're crazy.</p>
+
+        <p>Or you can click the button below, get the truth in the next 48 hours, and finally move forward—whether that means rebuilding trust or reclaiming your life.</p>
+
+        <p><span class="bold-text">The choice is yours.</span></p>
+
+        <p>But your intuition? It's trying to protect you.</p>
+
+        <div class="cta-center">
+            <a href="https://track.mspy.click/aff_c?offer_id=2&aff_id=21078&aff_sub=[cmc_vid]" class="cta-button-large">>> Get The Truth Today - Limited Time Discount <<</a>
+        </div>
+
+        <p style="text-align: center; font-size: 18px; font-weight: 600; margin-top: 40px;">You're not paranoid. You're not insecure. You're just done being lied to.<br>And it's time to trust yourself again.</p>
+    </main>
+
+    <div class="disclaimer-section">
+        <center>
+            <p class="small">This site is not a part of the Facebook or Facebook Inc or YouTube website or YouTube Inc. Additionally, This site is NOT endorsed by Facebook or YouTube in any way. Facebook is a trademark of Facebook Inc and YouTube is a trademark of YouTube, Inc.</p>
+
+            <p class="small">The content of this website does not constitute health or legal advice and is provided for general information purposes only. We take care to make sure that the information and material appearing on this website is accurate and up-to-date but know errors and omissions may occur and you should not take the accuracy of the information and material for granted or rely upon it as a statement or representation of fact.</p>
+            
+            <p class="small">This site contains affiliate links and we may get a commission from each sale/lead.</p>
+
+            <p class="small"><a href="https://americancitizenoffers.com/privacy-policy">Privacy Policy</a> | <a href="https://americancitizenoffers.com/terms-and-conditions">Terms & Conditions</a></p>
+            
+            <p class="small">Copyright © www.americancitizenoffers.com 2023</p>
+        </center>
+    </div>
+</body>
+</html>
