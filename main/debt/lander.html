@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2B313D;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+
+        /* Header – soft blue like the original lander */
+        .header {
+            background-color: #C8E0EA;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            height: 110px;
+        }
+
+        /* Main section – soft light grey/blue background */
+        .container {
+            padding: 50px 20px;
+            background-color: #F5F7FA;
+        }
+
+        .headline {
+            font-size: 40px;
+            font-weight: bold;
+            color: #2B313D;
+        }
+
+        .subtext {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #2B313D;
+        }
+
+        /* Benefits grid - two column layout */
+        .benefits {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .benefit {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            font-size: 16px;
+            color: #2B313D;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit:before {
+            content: "✓";
+            display: inline-block;
+            background: #5A8DAE;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Single benefit takes full width */
+        .benefit.full-width {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .headline {
+                font-size: 28px;
+            }
+        }
+
+        /* CTA buttons – blue like the Debt Authority button */
+        .cta-buttons {
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            background-color: #5A8DAE;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #4A7D9E;
+        }
+
+        /* Review section – white background, navy text */
+        .container2 {
+            background-color: #FFFFFF;
+            padding: 50px 20px;
+            color: #2B313D;
+        }
+
+        .reviews {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .reviews img {
+            max-width: 25%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .reviews img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .small {
+            font-size: 12px;
+            color: #2B313D;
+        }
+    </style>
+
+    <!-- Tracking & Pixels (unchanged) -->
+    <script>
+        window.clickmagick_cmc = {
+            uid: '205495',
+            hid: '2544215302',
+            cmc_project: 'Phone Tracking Software',
+        cmc_project: 'US-Debt',
+            vid_info: 'on',
+            log_engage: '#click',
+        }
+    </script>
+    <script src='//track.americancitizenoffers.com/38122746.js'></script>
+    <meta name="facebook-domain-verification" content="avxzznqnq1m1jvitz4jx06k90izrk6" />
+
+
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '498674006455904');
+        fbq('track', 'PageView');
+    </script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sgv3v4kfby");
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=498674006455904&ev=PageView&noscript=1"
+    /></noscript>
+</head>
+
+<body>
+    <div class="header">
+        <img src="assets/img/debt-logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container">
+        <div class="headline">In over $10,000 of debt? 7 ways to move towards debt-free today (banks won't tell you about this).</div>
+
+        <div class="subtext">Ready to finally break free from the endless cycle of debt? Thousands have used this to become 100% debt-free and ease all financial worries. Access the top solutions that have been proven to help Americans break out of debt.</div>
+
+        <div class="subtext" style="margin-top: 30px;"><strong>You may be able to:</strong></div>
+
+        <div class="benefits">
+            <div class="benefit">Access free financial programs</div>
+            <div class="benefit">Access a personalised debt relief plan</div>
+            <div class="benefit">Add another income stream</div>
+            <div class="benefit">Improve your credit score</div>
+            <div class="benefit">Borrow a low interest loan</div>
+            <div class="benefit">Reduce daily costs like auto insurance</div>
+            <div class="benefit full-width">Take cash out of your home</div>
+        </div>
+
+        <div class="subtext" style="margin-top: 30px;"><strong>Works for all types of debt.</strong></div>
+
+        <br>
+
+        <div class="cta-buttons">
+            <div class="subtext">Click the link below then enter your name and email address to see what options are available to you.</div>
+            <br>
+            <a href="https://afflat3e1.com/trk/lnk/4CD78545-ECE6-403C-B549-F2D31A791D57/?o=26995&c=918277&a=756656&k=482C44097738DC589AB6D6781E269C54&l=29175&s2=[cmc_vid]" id="click" class="cta-button">Reduce My Debt Today</a>
+        </div>
+    </div>
+
+
+
+        <br><br>
+
+        <center>
+            <p class="small">This site is not a part of Facebook or YouTube...</p>
+            <p class="small">The content of this website does not constitute health or legal advice...</p>
+            <p class="small">This site contains affiliate links and we may get a commission from each sale/lead.</p>
+            <p class="small"><a href="https://americancitizenoffers.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://americancitizenoffers.com/terms-and-conditions">Terms & Conditions</a></p>
+            <p class="small">Copyright © www.americancitizenoffers.com 2025</p>
+        </center>
+    </div>
+</body>
+</html>
