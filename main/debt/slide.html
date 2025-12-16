@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Solutions - Simple Slider</title>
+    
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: Arial, sans-serif;
+            color: #2B313D;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #F5F7FA; /* Light background for focus */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #C8E0EA;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            height: 110px;
+        }
+
+        /* MAIN CONTENT AREA (SLIDER & CTA) */
+        .main-content {
+            flex-grow: 1; /* Allows content to take up central space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* SLIDER CONTAINER */
+        .slider-container {
+            background-color: #FFFFFF;
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .slider-container h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .current-value {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .value-highlight {
+            font-weight: bold;
+            color: #5A8DAE;
+            font-size: 1.8em; /* Larger to draw attention */
+        }
+
+        #debtSlider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            margin: 15px 0;
+        }
+
+        #debtSlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #5A8DAE;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+
+        #debtSlider::-webkit-slider-thumb:hover {
+            background: #4A7D9E;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: -5px;
+        }
+        
+        /* CTA BUTTON */
+        .cta-container {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: #5A8DAE;
+            text-decoration: none;
+            display: block; /* Make it take full width of container */
+            padding: 15px 30px;
+            font-size: 18px; /* Slightly larger text */
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .cta-button:hover:not(:disabled) {
+            background-color: #4A7D9E;
+        }
+
+        .cta-button:disabled {
+            background-color: #8aaac5;
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .cta-hint {
+             font-size: 14px;
+             color: #dc3545; /* Red hint for importance */
+             margin-top: 10px;
+             font-weight: bold;
+        }
+
+        /* FOOTER & DISCLAIMERS */
+        .footer {
+            padding: 20px 10px;
+        }
+        
+        .small {
+            font-size: 12px;
+            color: #2B313D;
+            line-height: 1.5;
+        }
+
+        .small a {
+            color: #5A8DAE;
+            text-decoration: none;
+        }
+        
+        .small a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        window.clickmagick_cmc = {
+            uid: '205495',
+            hid: '2544215302',
+            cmc_project: 'US-Debt',
+            vid_info: 'on',
+            log_engage: '#click',
+        }
+    </script>
+    <script src='//track.americancitizenoffers.com/38122746.js'></script>
+    <meta name="facebook-domain-verification" content="avxzznqnq1m1jvitz4jx06k90izrk6" />
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '543720658836367');
+        fbq('track', 'PageView');
+    </script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a]||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sgv3v4kfby");
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=543720658836367&ev=PageView&noscript=1"
+    /></noscript>
+</head>
+
+<body>
+    <div class="header">
+        <img src="assets/img/debt-logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="main-content">
+        <div class="slider-container">
+            <h2>Select Your Total Unsecured Debt Amount:</h2>
+            
+            <p class="current-value">
+                Your Selection: 
+                <span id="debtValueDisplay" class="value-highlight">$10,000</span>
+            </p>
+
+            <input type="range" 
+                   id="debtSlider" 
+                   min="10000" 
+                   max="100000" 
+                   value="10000" 
+                   step="5000">
+
+            <div class="slider-labels">
+                <span>$10,000</span>
+                <span>$100,000+</span>
+            </div>
+
+            <div class="cta-container">
+                <a href="#" 
+                   id="offerCtaButton"
+                   data-base-url="https://afflat3e1.com/trk/lnk/4CD78545-ECE6-403C-B549-F2D31A791D57/?o=26995&c=918277&a=756656&k=482C44097738DC589AB6D6781E269C54&l=29175&s2=[cmc_vid]  id="click" " 
+                   class="cta-button" 
+                   disabled>
+                   Slide to Unlock Your Options
+                </a>
+                <p class="cta-hint" id="ctaHint">
+                    *Drag the slider above to see available solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p class="small"><strong>Disclaimer:</strong></p>
+                
+                <p class="small">This site is not a part of the Facebook or Facebook Inc or YouTube website or YouTube Inc. Additionally, this site is NOT endorsed by Facebook or YouTube in any way. Facebook is a trademark of Facebook Inc and YouTube is a trademark of YouTube Inc.</p>
+                
+                <p class="small">The content of this website does not constitute financial or legal advice and is provided for general information purposes only. While we aim to ensure the information is accurate, we make no guarantees and it should not be relied upon as fact.</p>
+                
+                <p class="small">This site contains affiliate links and we may receive a commission for each sale or lead.</p>
+                            <p class="small"><a href="https://americancitizenoffers.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://americancitizenoffers.com/terms-and-conditions">Terms & Conditions</a></p>
+            <p class="small">Copyright © www.americancitizenoffers.com 2025</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('debtSlider');
+            const display = document.getElementById('debtValueDisplay');
+            const ctaButton = document.getElementById('offerCtaButton');
+            const ctaHint = document.getElementById('ctaHint');
+            const baseUrl = ctaButton.getAttribute('data-base-url');
+            let sliderTouched = false;
+
+            // Function to format the number as currency
+            const formatCurrency = (number) => {
+                return new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                }).format(number);
+            };
+
+            // Update display and link on slider input
+            slider.addEventListener('input', function() {
+                const debtValue = parseInt(this.value);
+                const maxValue = parseInt(this.max);
+
+                // 1. Update Display
+                let displayValue = formatCurrency(debtValue);
+                if (debtValue === maxValue) {
+                    displayValue += '+';
+                }
+                display.textContent = displayValue;
+
+                // 2. Enable Button and Update Link
+                if (!sliderTouched) {
+                    sliderTouched = true;
+                    ctaButton.removeAttribute('disabled');
+                    ctaHint.style.display = 'none'; // Hide hint once activated
+                }
+                
+                // 3. Update the tracking URL with the selected debt value
+                const debtParam = '&debt_amount=' + debtValue;
+                ctaButton.href = baseUrl + debtParam;
+
+                // 4. Update Button Text dynamically
+                ctaButton.textContent = 'See Options for ' + displayValue;
+            });
+            
+            // Initial call to set the default state and link 
+            slider.dispatchEvent(new Event('input'));
+            
+            // Re-disable button on page load, forcing interaction
+            sliderTouched = false;
+            ctaButton.setAttribute('disabled', 'true');
+            ctaButton.textContent = 'Slide to Unlock Your Options';
+            ctaHint.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
